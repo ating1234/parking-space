@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "parking-space-checker",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-02-01",
+  "triggers": {
+    "crons": [
+      // 每週一 06:00 (UTC+8 台灣時間)，即 UTC 時間週日 22:00
+      "0 22 * * 0"
+    ]
+  },
+  "kv_namespaces": [
+    {
+      "binding": "PARKING_KV",
+      // 部署前請使用 `npx wrangler kv:namespace create PARKING_KV` 建立並填入生成的 ID
+      "id": "c9d4c3dc631a44778c20a940418bc772"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}

@@ -43,7 +43,7 @@
 npx wrangler login
 
 # 建立 KV 命名空間
-npx wrangler kv:namespace create PARKING_KV
+npx wrangler kv namespace create PARKING_KV
 ```
 
 執行後會看到類似輸出：

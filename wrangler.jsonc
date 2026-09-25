@@ -1,12 +1,12 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "parking-space-checker",
+  "name": "parking-space",
   "main": "src/index.ts",
   "compatibility_date": "2025-02-01",
   "triggers": {
     "crons": [
       // 每週一 06:00 (UTC+8 台灣時間)，即 UTC 時間週日 22:00
-      "0 22 * * 0"
+      "0 22 * * SUN"
     ]
   },
   "kv_namespaces": [
